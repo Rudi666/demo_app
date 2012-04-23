@@ -1,0 +1,174 @@
+
+# Rails Environment Configuration.
+
+---
+git:
+  user.name:  Joe Karas
+  user.email: rudi4@tampabay.rr.com
+  version:    git version 1.7.9.msysgit.0
+
+ruby:
+  bin:        C:/RailsInstaller/Ruby1.9.2/bin/ruby.exe
+  version:    ruby 1.9.3p125 (2012-02-16) [i386-mingw32]
+
+rails:
+  bin:        C:/RailsInstaller/Ruby1.9.2/bin/rails.bat
+  version:    Rails 3.2.1
+
+ssh:
+  public_key_location: C:\Users\Rudi/.ssh/id_rsa.pub
+  public_key_contents: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxdthWrIVHUSn4O3tPpQKl
+beVHXqnEmpljhq4LIELvfTdgub/s5vMv6FZXI5rbIutRlIGdJkZsyeigJAdo4F13cC6IUzzuug+JWVlq
+WlRljwLN0sJcK+SjQg6jtFmxrclrvOJwh3/6wsfl/8hGLodJBOmi/nRndg6fjk3rnwMBG2gA3p+iqVRF
+FRVthirhT44wtEymUy3PV+OPx+ksM2RnqihYEZImeUWAA7P0nvSSr2Q4JuxIdbb5TSv2XyhqxPhNAYqT
+NNOhAlHR2b3LNUpmIo5SLy50ja3hIPnFrROSvDNUoWY8alMsHHdlQbYB1n2gOFwaJLXfn7wu2D7f6+li
+w== rudi4@tampabay.rr.com
+
+
+
+
+C:\Sites>cd demo_app
+
+C:\Sites\demo_app>rails generate scaffold Micropost content:string user_id:integ
+er
+      invoke  active_record
+      create    db/migrate/20120423074225_create_microposts.rb
+      create    app/models/micropost.rb
+      invoke    test_unit
+      create      test/unit/micropost_test.rb
+      create      test/fixtures/microposts.yml
+       route  resources :microposts
+      invoke  scaffold_controller
+      create    app/controllers/microposts_controller.rb
+      invoke    erb
+      create      app/views/microposts
+      create      app/views/microposts/index.html.erb
+      create      app/views/microposts/edit.html.erb
+      create      app/views/microposts/show.html.erb
+      create      app/views/microposts/new.html.erb
+      create      app/views/microposts/_form.html.erb
+      invoke    test_unit
+      create      test/functional/microposts_controller_test.rb
+      invoke    helper
+      create      app/helpers/microposts_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/microposts_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/microposts.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/microposts.css.scss
+      invoke  scss
+   identical    app/assets/stylesheets/scaffolds.css.scss
+
+C:\Sites\demo_app>bundle exec rake db:migrate
+==  CreateMicroposts: migrating ===============================================
+-- create_table(:microposts)
+   -> 0.2030s
+==  CreateMicroposts: migrated (0.2050s) ======================================
+
+
+C:\Sites\demo_app>git init
+Initialized empty Git repository in C:/Sites/demo_app/.git/
+
+C:\Sites\demo_app>git add .
+
+C:\Sites\demo_app>git commit -m "Initial commit"
+[master (root-commit) bd633fd] Initial commit
+ 69 files changed, 1795 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/rails.png
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/javascripts/microposts.js.coffee
+ create mode 100644 app/assets/javascripts/users.js.coffee
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/assets/stylesheets/microposts.css.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 app/assets/stylesheets/users.css.scss
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/microposts_controller.rb
+ create mode 100644 app/controllers/users_controller.rb
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/helpers/microposts_helper.rb
+ create mode 100644 app/helpers/users_helper.rb
+ create mode 100644 app/mailers/.gitkeep
+ create mode 100644 app/models/.gitkeep
+ create mode 100644 app/models/micropost.rb
+ create mode 100644 app/models/user.rb
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/microposts/_form.html.erb
+ create mode 100644 app/views/microposts/edit.html.erb
+ create mode 100644 app/views/microposts/index.html.erb
+ create mode 100644 app/views/microposts/new.html.erb
+ create mode 100644 app/views/microposts/show.html.erb
+ create mode 100644 app/views/users/_form.html.erb
+ create mode 100644 app/views/users/edit.html.erb
+ create mode 100644 app/views/users/index.html.erb
+ create mode 100644 app/views/users/new.html.erb
+ create mode 100644 app/views/users/show.html.erb
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/secret_token.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 db/migrate/20120423073333_create_users.rb
+ create mode 100644 db/migrate/20120423074225_create_microposts.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 doc/README_FOR_APP
+ create mode 100644 lib/assets/.gitkeep
+ create mode 100644 lib/tasks/.gitkeep
+ create mode 100644 log/.gitkeep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/index.html
+ create mode 100644 public/robots.txt
+ create mode 100644 script/rails
+ create mode 100644 test/fixtures/.gitkeep
+ create mode 100644 test/fixtures/microposts.yml
+ create mode 100644 test/fixtures/users.yml
+ create mode 100644 test/functional/.gitkeep
+ create mode 100644 test/functional/microposts_controller_test.rb
+ create mode 100644 test/functional/users_controller_test.rb
+ create mode 100644 test/integration/.gitkeep
+ create mode 100644 test/performance/browsing_test.rb
+ create mode 100644 test/test_helper.rb
+ create mode 100644 test/unit/.gitkeep
+ create mode 100644 test/unit/helpers/microposts_helper_test.rb
+ create mode 100644 test/unit/helpers/users_helper_test.rb
+ create mode 100644 test/unit/micropost_test.rb
+ create mode 100644 test/unit/user_test.rb
+ create mode 100644 vendor/assets/javascripts/.gitkeep
+ create mode 100644 vendor/assets/stylesheets/.gitkeep
+ create mode 100644 vendor/plugins/.gitkeep
+
+C:\Sites\demo_app>git remote add origin git@github.com:Rudi666/demo_app.git
+
+C:\Sites\demo_app>git push -u origin master
+Counting objects: 102, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (89/89), done.
+Writing objects: 100% (102/102), 32.42 KiB | 44 KiB/s, done.
+Total 102 (delta 8), reused 0 (delta 0)
+To git@github.com:Rudi666/demo_app.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\Sites\demo_app>
